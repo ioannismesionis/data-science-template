@@ -2,7 +2,7 @@ stages:
   process_data:
     cmd: python src/process.py
     deps:
-    - config/main.yaml
+    - config/main.toml
     - config/process
     - data/raw
     - src/process.py
@@ -12,7 +12,7 @@ stages:
   train_model:
     cmd: python src/train_model.py
     deps:
-    - config/main.yaml
+    - config/main.toml
     - config/model
     - data/processed
     - src/train_model.py
